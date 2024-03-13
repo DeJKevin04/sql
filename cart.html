@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h1>Your Shopping Cart</h1>
+    <table border="1">
+        <tr>
+            <th>Product ID</th>
+            <th>Quantity</th>
+        </tr>
+        <?php
+        // Include the database connection file
+        include 'dbconn.php';
+
+        // Prepare the SQL statement to retrieve data from the cart table
+        $sql = "SELECT * FROM cart";
+
+        // Execute the statement and fetch all the records
+        $stmt = $pdo->query($sql);
+        while ($row = $stmt->fetch()) {
+            echo "<tr>";
+            echo "<td>" . htmlspecialchars($row['product_id']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['quantity']) . "</td>";
+            echo "</tr>";
+        }
+        ?>
+    </table>
+</body>
+</html>

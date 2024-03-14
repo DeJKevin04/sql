@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            float: left;
+        }
+        .container {
+            padding: 2px 16px;
+        }
+        .price-quantity {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price {
+            margin: 0;
+        }
+        .item-quantity {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Example card -->
+    <div class="card">
+        <img src="path_to_image" alt="Item" style="width:100%">
+        <div class="container">
+            <h4><b>Product Name</b></h4>
+            <div class="price-quantity">
+                <p class="price">$<span class="item-price">Price</span></p>
+                <input type="number" value="Quantity" min="1" class="item-quantity" placeholder="Quantity">
+            </div>
+            <button onclick="addToCart('product_id')">Add to Cart</button>
+        </div>
+    </div>
+    <!-- You can repeat the above card structure for each item in the cart -->
+
+    <script>
+        function addToCart(productId) {
+            // Implement the logic to add the product to the cart
+            console.log('Added to cart:', productId);
+        }
+    </script>
+</body>
+</html>

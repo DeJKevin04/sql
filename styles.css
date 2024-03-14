@@ -1,0 +1,24 @@
+.card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.container {
+    padding: 2px 16px;
+}
+.price-quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price {
+    margin: 0;
+}
+.item-quantity {
+    width: 50px;
+}
